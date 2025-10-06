@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream> // Para entrada/salida (cin, cout)
+#include <cstdlib>  // Para funciones rand() y srand()
+#include <ctime>    // Para la función time()
+
+int main() {
+    // 1. Inicializar el generador de números aleatorios con el tiempo actual
+    // Esto asegura que se generen números aleatorios diferentes cada vez que se ejecuta el programa
+    std::srand(static_cast<unsigned int>(std::time(0)));
+
+    // 2. Generar un número aleatorio entre 1 y 100
+    // rand() % 100 genera un número entre 0 y 99, y sumamos 1 para obtener el rango 1-100
+    int numeroAleatorio = 1 + (std::rand() % 100);
+    int suposicion = 0;
+    int intentos = 0;
+    const int maxIntentos = 10; // Definimos un número máximo de intentos
+
+    std::cout << "¡Bienvenido al juego de Adivina el Número!" << std::endl;
+    std::cout << "He pensado en un número entre 1 y 100." << std::endl;
+    std::cout << "Tienes " << maxIntentos << " intentos para adivinarlo." << std::endl;
+
+    // 3. Bucle para las suposiciones del usuario
+    while (intentos < maxIntentos && suposicion != numeroAleatorio) {
+        std::cout << "Intento #" << (intentos + 1) << ": Ingresa tu número: ";
+        std::cin >> suposicion;
+        intentos++;
+
+        // 4. Comprobar la suposición
+        if (suposicion < numeroAleatorio) {
+            std::cout << "¡Tu número es demasiado bajo!" << std::endl;
+        } else if (suposicion > numeroAleatorio) {
+            std::cout << "¡Tu número es demasiado alto!" << std::endl;
+        } else {
+            std::cout << "\n¡Felicidades! ¡Adivinaste el número " << numeroAleatorio << " en " << intentos << " intentos!" << std::endl;
+        }
+    }
+
+    // 5. Mensaje de derrota si se agotaron los intentos
+    if (suposicion != numeroAleatorio) {
+        std::cout << "\n¡Se te acabaron los intentos! El número era " << numeroAleatorio << "." << std::endl;
+    }
+
+    return 0;
+}
