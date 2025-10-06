@@ -1,0 +1,35 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+int main() {
+    int num1, num2, num3;
+
+    std::cout << "Ingrese el primer número: ";
+    std::cin >> num1;
+    std::cout << "Ingrese el segundo número: ";
+    std::cin >> num2;
+    std::cout << "Ingrese el tercer número: ";
+    std::cin >> num3;
+
+    int menor = num1; // Asignamos el primer número como el menor inicial
+
+    // Comparamos con el segundo número
+    if (num2 < menor) {
+        menor = num2;
+    }
+    // Comparamos con el tercer número
+    if (num3 < menor) {
+        menor = num3;
+    }
+
+    std::cout << "El número menor es: " << menor << std::endl;
+
+    return 0;
+}
