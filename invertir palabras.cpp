@@ -1,0 +1,22 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <string>
+#include <algorithm> // Para std::reverse
+
+int main() {
+    std::string palabra = "hola"; // La palabra original
+    std::cout << "Palabra original: " << palabra << std::endl; // Salida: Palabra original: hola
+
+    // Invertir la cadena usando std::reverse
+    std::reverse(palabra.begin(), palabra.end());
+
+    std::cout << "Palabra invertida: " << palabra << std::endl; // Salida: Palabra invertida: aloh
+    return 0;
+}
