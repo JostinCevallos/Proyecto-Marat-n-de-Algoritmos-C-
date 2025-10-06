@@ -1,0 +1,26 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream> // Para las funciones de entrada/salida (cin, cout)
+
+int main() {
+    int numero; // Declara una variable entera para almacenar el número
+
+    // Solicita al usuario que ingrese un número
+    std::cout << "Ingresa un número entero: ";
+    std::cin >> numero; // Lee el número y lo almacena en la variable 'numero'
+
+    // Verifica si el número es par o impar usando el operador módulo (%)
+    if (numero % 2 == 0) { // Si el residuo de dividir 'numero' entre 2 es 0...
+        std::cout << numero << " es un número par." << std::endl; // ...es par
+    } else { // Si la condición anterior no se cumple...
+        std::cout << numero << " es un número impar." << std::endl; // ...es impar
+    }
+
+    return 0; // Indica que el programa terminó correctamente
+}
