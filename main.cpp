@@ -1,0 +1,25 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream> // Incluye la librería para entrada/salida
+
+int main() {
+    int num1, num2, suma; // Declara variables para los números y la suma
+
+    std::cout << "Ingresa el primer número: "; // Solicita el primer número
+    std::cin >> num1; // Lee el primer número del usuario
+
+    std::cout << "Ingresa el segundo número: "; // Solicita el segundo número
+    std::cin >> num2; // Lee el segundo número del usuario
+
+    suma = num1 + num2; // Suma los dos números y guarda el resultado en 'suma'
+
+    std::cout << "La suma es: " << suma << std::endl; // Muestra el resultado
+
+    return 0; // Indica que el programa finalizó correctamente
+}
