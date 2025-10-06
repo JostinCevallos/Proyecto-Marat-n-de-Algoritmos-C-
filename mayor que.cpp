@@ -1,0 +1,34 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream> // Para entrada y salida de datos
+
+int main() {
+    int numero1, numero2; // Declarar dos variables enteras
+
+    std::cout << "Introduce el primer número: ";
+    std::cin >> numero1; // Solicitar al usuario el primer número
+
+    std::cout << "Introduce el segundo número: ";
+    std::cin >> numero2; // Solicitar al usuario el segundo número
+
+    // Comprobar si el primer número es mayor que el segundo
+    if (numero1 > numero2) {
+        std::cout << "El número " << numero1 << " es mayor que " << numero2 << std::endl;
+    } 
+    // Si no es mayor, comprobar si el segundo número es mayor
+    else if (numero2 > numero1) {
+        std::cout << "El número " << numero2 << " es mayor que " << numero1 << std::endl;
+    } 
+    // Si ninguno es mayor, entonces son iguales
+    else {
+        std::cout << "Los dos números son iguales." << std::endl;
+    }
+
+    return 0; // Indica que el programa terminó correctamente
+}
