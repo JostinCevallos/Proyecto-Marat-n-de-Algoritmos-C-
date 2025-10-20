@@ -1,0 +1,32 @@
+#include <iostream> // Para entrada/salida
+
+int main() {
+    // 1. Declara e inicializa el arreglo
+    int arreglo[] = {47, 19, 6, 84, 23};
+    int tamano = sizeof(arreglo) / sizeof(arreglo[0]); // Calcula el tamaño del arreglo
+
+    // 2. Asume que el primer elemento es el mayor inicialmente
+    int mayor = arreglo[0];
+
+    // 3. Recorre el arreglo desde el segundo elemento (índice 1)
+    for (int i = 1; i < tamano; ++i) {
+        // 4. Si el elemento actual es mayor, actualiza la variable 'mayor'
+        if (arreglo[i] > mayor) {
+            mayor = arreglo[i];
+        }
+    }
+
+    // 5. Imprime el resultado
+    std::cout << "El valor mayor en el arreglo es: " << mayor << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+#include <iostream>
+#include <limits> // Para std::numeric_limits
+
+int main() {
+    // Ejemplo de un arreglo. Puedes cambiarlo por los valores que necesites.
+    int arr[] = {10, 5, 20, 8, 15, 25};
+    int n = sizeof(arr) / sizeof(arr[0]); // Calcula el tamaño del arreglo
+
+    if (n < 2) {
+        std::cout << "El arreglo debe tener al menos dos elementos." << std::endl;
+        return 1;
+    }
+
+    // Inicializar mayor y segundo_mayor con el valor más bajo posible
+    int mayor = std::numeric_limits<int>::min();
+    int segundo_mayor = std::numeric_limits<int>::min();
+
+    // Recorrer el arreglo
+    for (int i = 0; i < n; ++i) {
+        if (arr[i] > mayor) {
+            // Si el elemento actual es mayor que el mayor,
+            // el anterior mayor se convierte en segundo mayor
+            segundo_mayor = mayor;
+            mayor = arr[i];
+        } else if (arr[i] > segundo_mayor && arr[i] != mayor) {
+            // Si el elemento actual es mayor que el segundo mayor,
+            // pero no es igual al mayor
+            segundo_mayor = arr[i];
+        }
+    }
+
+    // Imprimir el resultado
+    if (segundo_mayor == std::numeric_limits<int>::min()) {
+        std::cout << "No se encontró un segundo mayor (ej. el arreglo tiene solo un elemento o todos son iguales)." << std::endl;
+    } else {
+        std::cout << "El segundo mayor elemento es: " << segundo_mayor << std::endl;
+    }
+
+    return 0;
+}

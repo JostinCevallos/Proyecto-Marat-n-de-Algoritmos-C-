@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector> // Se incluye la librería para usar vectores (arreglos dinámicos)
+
+// Función para verificar si un arreglo de enteros es palíndromo
+bool esPalindromo(const std::vector<int>& arr) {
+    int inicio = 0;
+    int fin = arr.size() - 1;
+
+    while (inicio < fin) {
+        if (arr[inicio] != arr[fin]) {
+            return false; // Si los elementos no coinciden, no es palíndromo
+        }
+        inicio++; // Mover el puntero de inicio hacia la derecha
+        fin--;    // Mover el puntero de fin hacia la izquierda
+    }
+    return true; // Si el bucle termina, el arreglo es palíndromo
+}
+
+int main() {
+    // Ejemplo 1: Arreglo palíndromo
+    std::vector<int> arr1 = {1, 2, 3, 2, 1};
+    if (esPalindromo(arr1)) {
+        std::cout << "El arreglo {1, 2, 3, 2, 1} es un palíndromo." << std::endl;
+    } else {
+        std::cout << "El arreglo {1, 2, 3, 2, 1} no es un palíndromo." << std::endl;
+    }
+
+    // Ejemplo 2: Arreglo no palíndromo
+    std::vector<int> arr2 = {1, 2, 3, 4, 5};
+    if (esPalindromo(arr2)) {
+        std::cout << "El arreglo {1, 2, 3, 4, 5} es un palíndromo." << std::endl;
+    } else {
+        std::cout << "El arreglo {1, 2, 3, 4, 5} no es un palíndromo." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+

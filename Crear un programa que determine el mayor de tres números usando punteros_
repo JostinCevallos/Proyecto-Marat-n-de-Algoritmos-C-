@@ -1,0 +1,61 @@
+#include <iostream>
+#include <algorithm> // Necesario para `std::max` si se usa
+
+int main() {
+    int num1, num2, num3;
+    std::cout << "Introduce tres números enteros separados por espacios: ";
+    std::cin >> num1 >> num2 >> num3;
+
+    // Opción 1: Usando punteros y condicionales
+    int *ptr1 = &num1;
+    int *ptr2 = &num2;
+    int *ptr3 = &num3;
+
+    int *mayor = ptr1; // Asumimos que el primero es el mayor inicialmente
+
+    if (*ptr2 > *mayor) {
+        mayor = ptr2;
+    }
+    if (*ptr3 > *mayor) {
+        mayor = ptr3;
+    }
+
+    std::cout << "El mayor número es: " << *mayor << std::endl;
+
+    // Opción 2: Usando la función `std::max` (requiere `<algorithm>`)
+    // int mayor_valor = std::max({num1, num2, num3});
+    // std::cout << "El mayor número (con std::max) es: " << mayor_valor << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

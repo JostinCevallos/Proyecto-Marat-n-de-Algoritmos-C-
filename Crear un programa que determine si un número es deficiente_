@@ -1,0 +1,39 @@
+#include <iostream>
+
+// Función para calcular la suma de los divisores propios de un número
+int sumaDivisoresPropios(int n) {
+    int suma = 0;
+    // Iterar desde 1 hasta n/2 para encontrar los divisores
+    for (int i = 1; i <= n / 2; ++i) {
+        if (n % i == 0) { // Si i es un divisor de n
+            suma += i;    // Añadir i a la suma
+        }
+    }
+    return suma;
+}
+
+int main() {
+    int numero;
+
+    // Solicitar al usuario que ingrese un número
+    std::cout << "Introduce un numero entero positivo: ";
+    std::cin >> numero;
+
+    // Verificar si el número es negativo o cero
+    if (numero <= 0) {
+        std::cout << "Por favor, introduce un numero entero positivo." << std::endl;
+        return 1; // Indicar un error
+    }
+
+    // Calcular la suma de los divisores propios
+    int suma = sumaDivisoresPropios(numero);
+
+    // Comparar la suma con el número original para determinar si es deficiente
+    if (suma < numero) {
+        std::cout << "El numero " << numero << " es un numero deficiente." << std::endl;
+    } else {
+        std::cout << "El numero " << numero << " no es un numero deficiente." << std::endl;
+    }
+
+    return 0; // Indicar que el programa finalizó con éxito
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+#include <set>
+#include <cmath> // Para std::pow
+
+// Función para calcular la suma de los cuadrados de los dígitos de un número
+int sumaCuadradosDigitos(int n) {
+    int suma = 0;
+    while (n > 0) {
+        int digito = n % 10;
+        suma += digito * digito; // std::pow(digito, 2) también puede ser usado
+        n /= 10;
+    }
+    return suma;
+}
+
+// Función para determinar si un número es feliz
+bool esNumeroFeliz(int n) {
+    std::set<int> vistos;
+    while (n != 1 && vistos.find(n) == vistos.end()) {
+        vistos.insert(n);
+        n = sumaCuadradosDigitos(n);
+    }
+    return n == 1;
+}
+
+int main() {
+    int numero;
+    std::cout << "Introduce un número entero positivo: ";
+    std::cin >> numero;
+
+    if (numero <= 0) {
+        std::cout << "Por favor, introduce un número entero positivo." << std::endl;
+        return 1;
+    }
+
+    if (esNumeroFeliz(numero)) {
+        std::cout << numero << " es un número feliz." << std::endl;
+    } else {
+        std::cout << numero << " no es un número feliz." << std::endl;
+    }
+
+    return 0;
+}
+
+

@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstring> // Para strlen si deseas comparar con él
+
+int main() {
+    const char* miCadena = "Hola, mundo!";
+    int longitud = 0;
+    const char* puntero = miCadena; // El puntero apunta al inicio de la cadena
+
+    // Recorre la cadena hasta encontrar el carácter nulo
+    while (*puntero != '\0') {
+        longitud++;
+        puntero++; // Mueve el puntero al siguiente carácter
+    }
+
+    std::cout << "La longitud de la cadena es: " << longitud << std::endl;
+
+    // Puedes comparar con strlen para verificar
+    // std::cout << "Longitud con strlen: " << strlen(miCadena) << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

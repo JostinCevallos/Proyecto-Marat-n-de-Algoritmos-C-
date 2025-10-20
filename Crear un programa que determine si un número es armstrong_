@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath> // Para usar la función pow()
+
+int main() {
+    int numOriginal, num, digito, suma = 0, numDigitos = 0;
+
+    std::cout << "Ingresa un número: ";
+    std::cin >> numOriginal;
+
+    // Guardamos una copia para poder manipularla sin perder el original
+    num = numOriginal;
+
+    // 1. Contar el número de dígitos
+    while (num != 0) {
+        num /= 10;
+        numDigitos++;
+    }
+
+    // 2. Calcular la suma de los dígitos elevados a la potencia del número de dígitos
+    num = numOriginal; // Reiniciamos 'num' para recorrer los dígitos
+    while (num != 0) {
+        digito = num % 10; // Obtenemos el último dígito
+        suma += std::pow(digito, numDigitos); // Sumamos el dígito elevado a la potencia
+        num /= 10; // Eliminamos el último dígito
+    }
+
+    // 3. Comparar la suma con el número original
+    if (suma == numOriginal) {
+        std::cout << numOriginal << " es un número de Armstrong." << std::endl;
+    } else {
+        std::cout << numOriginal << " no es un número de Armstrong." << std::endl;
+    }
+
+    return 0;
+}
+

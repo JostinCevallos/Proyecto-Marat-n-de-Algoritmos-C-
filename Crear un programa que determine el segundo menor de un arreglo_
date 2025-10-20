@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <limits> // Para usar std::numeric_limits
+
+int main() {
+    std::vector<int> arreglo = {24, 36, 18, 2, 10};
+
+    // Manejo de caso borde: si el arreglo tiene menos de 2 elementos
+    if (arreglo.size() < 2) {
+        std::cout << "El arreglo debe tener al menos dos elementos." << std::endl;
+        return 1;
+    }
+
+    // Inicializa menor1 y menor2 con valores muy grandes
+    int menor1 = std::numeric_limits<int>::max();
+    int menor2 = std::numeric_limits<int>::max();
+
+    // Itera sobre el arreglo para encontrar el segundo menor
+    for (int elemento : arreglo) {
+        if (elemento < menor1) {
+            menor2 = menor1;
+            menor1 = elemento;
+        } else if (elemento < menor2 && elemento != menor1) {
+            menor2 = elemento;
+        }
+    }
+
+    // Manejo de caso borde: si todos los elementos son iguales
+    if (menor2 == std::numeric_limits<int>::max()) {
+        std::cout << "No hay un segundo menor (todos los elementos son iguales)." << std::endl;
+    } else {
+        std::cout << "El segundo menor es: " << menor2 << std::endl;
+    }
+
+    return 0;
+}

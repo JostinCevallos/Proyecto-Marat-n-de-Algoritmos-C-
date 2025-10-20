@@ -1,0 +1,34 @@
+#include <iostream>
+#include <limits> // Para std::numeric_limits
+
+int main() {
+    // Define el arreglo
+    int miArreglo[] = { 47, 19, 6, 84, 23 };
+    int tamano = sizeof(miArreglo) / sizeof(miArreglo[0]); // Calcula el tamaño del arreglo
+
+    // Inicializa el valor mínimo con el primer elemento del arreglo
+    int valorMinimo = miArreglo[0];
+
+    // Itera a través del arreglo a partir del segundo elemento
+    for (int i = 1; i < tamano; ++i) {
+        // Si el elemento actual es menor que el valor mínimo actual, actualiza valorMinimo
+        if (miArreglo[i] < valorMinimo) {
+            valorMinimo = miArreglo[i];
+        }
+    }
+
+    // Imprime el resultado
+    std::cout << "El menor valor en el arreglo es: " << valorMinimo << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+

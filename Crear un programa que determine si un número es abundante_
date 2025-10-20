@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    int numero, sumaDivisores = 0;
+
+    // 1. Solicitar el número al usuario
+    std::cout << "Introduce un número entero positivo: ";
+    std::cin >> numero;
+
+    // 2. Encontrar y sumar los divisores propios
+    for (int i = 1; i <= numero / 2; ++i) {
+        if (numero % i == 0) {
+            sumaDivisores += i;
+        }
+    }
+
+    // 3. Determinar si el número es abundante
+    if (sumaDivisores > numero) {
+        std::cout << numero << " es un número abundante." << std::endl;
+    } else {
+        std::cout << numero << " no es un número abundante." << std::endl;
+    }
+
+    return 0;
+}
