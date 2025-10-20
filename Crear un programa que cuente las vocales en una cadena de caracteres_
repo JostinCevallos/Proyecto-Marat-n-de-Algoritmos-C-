@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+#include <cctype> // Para la función tolower
+
+using namespace std;
+
+int main() {
+    string cadena;
+    int contadorVocales = 0;
+
+    cout << "Ingrese una cadena de caracteres: ";
+    // Usa getline para leer toda la línea, incluyendo espacios
+    getline(cin, cadena); 
+
+    // Recorre cada carácter de la cadena
+    for (char caracter : cadena) {
+        // Convierte el carácter a minúsculas para simplificar la comparación
+        char caracterMinuscula = tolower(caracter);
+
+        // Verifica si el carácter es una vocal
+        if (caracterMinuscula == 'a' || caracterMinuscula == 'e' || 
+            caracterMinuscula == 'i' || caracterMinuscula == 'o' || 
+            caracterMinuscula == 'u') {
+            contadorVocales++;
+        }
+    }
+
+    cout << "El número de vocales en la cadena es: " << contadorVocales << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

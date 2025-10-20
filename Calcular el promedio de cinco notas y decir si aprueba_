@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector> // Incluir la biblioteca para usar 'std::vector'
+#include <numeric> // Incluir la biblioteca para usar 'std::accumulate'
+#include <iomanip> // Incluir la biblioteca para formatear la salida con std::fixed y std::setprecision
+
+int main() {
+    // Declarar un vector para almacenar las 5 notas
+    std::vector<double> notas(5);
+    double suma_notas = 0;
+    double promedio;
+
+    std::cout << "Programa para calcular el promedio de 5 notas." << std::endl;
+
+    // Bucle para solicitar las 5 notas al usuario
+    for (int i = 0; i < 5; ++i) {
+        std::cout << "Ingrese la nota " << (i + 1) << ": ";
+        std::cin >> notas[i];
+        suma_notas += notas[i];
+    }
+
+    // Calcular el promedio
+    // La división se realiza con puntos para garantizar un resultado de punto flotante
+    promedio = suma_notas / 5.0;
+
+    // Mostrar el promedio
+    // Usamos std::fixed y std::setprecision para mostrar el promedio con dos decimales
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "El promedio de las 5 notas es: " << promedio << std::endl;
+
+    // Determinar si el estudiante aprueba o reprueba
+    // Se considera que la nota de aprobación es 5.0 (puede ajustarse)
+    if (promedio >= 5.0) {
+        std::cout << "¡Felicidades, ha aprobado!" << std::endl;
+    } else {
+        std::cout << "El estudiante ha reprobado." << std::endl;
+    }
+
+    return 0;
+}
+

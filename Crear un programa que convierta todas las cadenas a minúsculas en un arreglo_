@@ -1,0 +1,56 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cctype> // Para la función tolower()
+#include <algorithm> // Para std::transform
+
+int main() {
+    // Arreglo de cadenas (usamos std::vector para un arreglo dinámico)
+    std::vector<std::string> miArreglo = {"¡Hola", "MUNDO!", "Poniendo", "TODO", "en", "minúsculas"};
+
+    // Iterar sobre cada cadena del arreglo
+    for (std::string &cadena : miArreglo) {
+        // Opción 1: Iterar sobre cada carácter
+        for (char &c : cadena) {
+            c = std::tolower(c);
+        }
+
+        // Opción 2: Usar std::transform (más concisa)
+        // std::transform(cadena.begin(), cadena.end(), cadena.begin(), ::tolower);
+    }
+
+    // Imprimir el arreglo modificado
+    std::cout << "Arreglo en minúsculas:" << std::endl;
+    for (const std::string &cadena : miArreglo) {
+        std::cout << cadena << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

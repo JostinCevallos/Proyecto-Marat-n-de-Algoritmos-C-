@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath> // Para std::abs
+
+int main() {
+    // Declarar variables para los números
+    double num1, num2;
+
+    // Pedir al usuario que ingrese los dos números
+    std::cout << "Ingrese el primer número: ";
+    std::cin >> num1;
+    std::cout << "Ingrese el segundo número: ";
+    std::cin >> num2;
+
+    // Calcular la diferencia simple
+    double diferencia = num1 - num2;
+    std::cout << "La diferencia (num1 - num2) es: " << diferencia << std::endl;
+
+    // Calcular la diferencia absoluta (siempre positiva)
+    double diferencia_abs = std::abs(num1 - num2);
+    std::cout << "La diferencia absoluta es: " << diferencia_abs << std::endl;
+
+    // Otra forma de calcular la diferencia absoluta usando un operador ternario
+    double diferencia_abs_ternaria = (num1 > num2) ? (num1 - num2) : (num2 - num1);
+    std::cout << "La diferencia absoluta (ternaria) es: " << diferencia_abs_ternaria << std::endl;
+
+    return 0;
+}

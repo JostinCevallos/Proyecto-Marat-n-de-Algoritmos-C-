@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main() {
+    int suma = 0;
+    int contador_impares = 0;
+
+    // Iteramos hasta encontrar 50 números impares
+    for (int i = 1; contador_impares < 50; ++i) {
+        // Verificamos si el número es impar
+        if (i % 2 != 0) {
+            suma += i;
+            contador_impares++;
+        }
+    }
+
+    std::cout << "La suma de los primeros 50 números impares es: " << suma << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+

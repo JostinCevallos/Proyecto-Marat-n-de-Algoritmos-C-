@@ -1,0 +1,64 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cctype> // Para std::tolower
+
+int main() {
+    // Lista de cadenas para buscar
+    std::vector<std::string> cadenas = {"manzana", "pera", "uva", "platano", "naranja"};
+    char letra_buscada;
+
+    // Solicitar la letra al usuario
+    std::cout << "Ingresa la letra por la que deben terminar las cadenas: ";
+    std::cin >> letra_buscada;
+
+    // Convertir la letra buscada a minúsculas para una comparación insensible a mayúsculas y minúsculas
+    letra_buscada = std::tolower(letra_buscada);
+
+    std::cout << "\nCadenas que terminan con '" << letra_buscada << "':\n";
+
+    // Iterar sobre cada cadena en la lista
+    for (const std::string& cadena : cadenas) {
+        // Verificar que la cadena no esté vacía y que tenga al menos un carácter
+        if (!cadena.empty()) {
+            // Obtener el último carácter de la cadena y convertirlo a minúsculas
+            char ultimo_caracter = std::tolower(cadena.back());
+
+            // Comparar el último carácter con la letra buscada
+            if (ultimo_caracter == letra_buscada) {
+                std::cout << cadena << std::endl;
+            }
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

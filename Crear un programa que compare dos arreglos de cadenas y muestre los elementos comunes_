@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm> // Para sort y unique
+
+int main() {
+    std::vector<std::string> palabras = {"manzana", "banana", "manzana", "naranja", "banana", "pera"};
+
+    // 1. Ordenar el vector
+    std::sort(palabras.begin(), palabras.end());
+
+    // 2. Eliminar duplicados contiguos
+    // std::unique mueve los elementos únicos al principio y devuelve un iterador
+    // al primer elemento duplicado.
+    auto it = std::unique(palabras.begin(), palabras.end());
+
+    // 3. Eliminar los elementos duplicados que quedaron al final
+    palabras.erase(it, palabras.end());
+
+    // Imprimir el vector resultante
+    std::cout << "Vector sin duplicados (ordenado):" << std::endl;
+    for (const std::string& palabra : palabras) {
+        std::cout << palabra << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

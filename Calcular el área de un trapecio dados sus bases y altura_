@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    // Declaración de variables
+    double baseMayor, baseMenor, altura, area;
+
+    // Solicitar al usuario que ingrese las medidas
+    std::cout << "Ingrese la longitud de la base mayor: ";
+    std::cin >> baseMayor;
+
+    std::cout << "Ingrese la longitud de la base menor: ";
+    std::cin >> baseMenor;
+
+    std::cout << "Ingrese la altura del trapecio: ";
+    std::cin >> altura;
+
+    // Calcular el área
+    // La fórmula es: (baseMayor + baseMenor) * altura / 2
+    area = (baseMayor + baseMenor) * altura / 2;
+
+    // Mostrar el resultado
+    std::cout << "El area del trapecio es: " << area << std::endl;
+
+    return 0;
+}

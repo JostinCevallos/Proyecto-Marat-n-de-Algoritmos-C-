@@ -1,0 +1,20 @@
+#include <iostream> // Para entrada y salida estándar
+
+int main() {
+    int n; // Variable para almacenar el límite superior
+
+    // Solicitar al usuario que ingrese el número N
+    std::cout << "Introduce un numero entero N: ";
+    std::cin >> n;
+
+    std::cout << "Serie de cuadrados hasta " << n << ":" << std::endl;
+
+    // Bucle para generar la serie de cuadrados
+    for (int i = 1; i <= n; ++i) {
+        // Calcular el cuadrado y mostrarlo
+        std::cout << i * i << " ";
+    }
+
+    std::cout << std::endl; // Imprimir una nueva línea al final
+    return 0; // Indicar que el programa terminó correctamente
+}

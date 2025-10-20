@@ -1,0 +1,32 @@
+#include <iostream>
+
+// Función recursiva para calcular la suma de los primeros n números
+int sumaRecursiva(int n) {
+    // Caso base: si n es 0, la suma es 0
+    if (n == 0) {
+        return 0;
+    } else {
+        // Paso recursivo: suma n al resultado de la suma de los (n-1) números
+        return n + sumaRecursiva(n - 1);
+    }
+}
+
+int main() {
+    int numero;
+
+    // Solicitar al usuario que ingrese un número
+    std::cout << "Introduce un número entero positivo: ";
+    std::cin >> numero;
+
+    // Validar que el número sea positivo
+    if (numero < 0) {
+        std::cout << "Por favor, introduce un número positivo." << std::endl;
+    } else {
+        // Llamar a la función recursiva y mostrar el resultado
+        int resultado = sumaRecursiva(numero);
+        std::cout << "La suma de los primeros " << numero << " números es: " << resultado << std::endl;
+    }
+
+    return 0;
+}
+

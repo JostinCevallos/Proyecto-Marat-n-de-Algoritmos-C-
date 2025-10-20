@@ -1,0 +1,28 @@
+#include <iostream> // Se incluye la librería iostream para entrada/salida.
+
+int main() { // Se define la función principal del programa.
+    int n; // Se declara una variable entera para el límite superior.
+    int sumaPares = 0; // Se inicializa la variable para almacenar la suma de los pares.
+
+    std::cout << "Ingrese un número entero (N): "; // Se solicita al usuario que ingrese N.
+    std::cin >> n; // Se lee el valor de N ingresado por el usuario.
+
+    for (int i = 2; i <= n; i += 2) { // Se itera desde 2 hasta N, incrementando de 2 en 2.
+        sumaPares += i; // Se suma el número par actual a la variable sumaPares.
+    }
+
+    std::cout << "La suma de los números pares del 1 al " << n << " es: " << sumaPares << std::endl; // Se imprime el resultado.
+
+    return 0; // Se indica que el programa finalizó correctamente.
+}
+
+
+
+
+
+
+
+
+
+
+

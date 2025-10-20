@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+#include <numeric>
+
+int main() {
+    // 1. Declarar un vector de números (o ingresarlos por el usuario)
+    std::vector<int> numeros = {5, 12, 7, 18, 3, 9, 15};
+    int numero_limite = 10;
+
+    // 2. Inicializar variables para la suma y el contador
+    double suma_menores = 0;
+    int contador_menores = 0;
+
+    // 3. Iterar sobre el vector
+    for (int numero : numeros) {
+        // 4. Verificar si el número es menor que el número dado
+        if (numero < numero_limite) {
+            // 5. Si es menor, sumarlo al total y contar uno más
+            suma_menores += numero;
+            contador_menores++;
+        }
+    }
+
+    // 6. Calcular el promedio (evitar división por cero)
+    double promedio = 0;
+    if (contador_menores > 0) {
+        promedio = suma_menores / contador_menores;
+    }
+
+    // 7. Imprimir el resultado
+    std::cout << "La suma de los números menores que " << numero_limite << " es: " << suma_menores << std::endl;
+    std::cout << "La cantidad de números menores que " << numero_limite << " es: " << contador_menores << std::endl;
+    std::cout << "El promedio de los números menores que " << numero_limite << " es: " << promedio << std::endl;
+
+    return 0;
+}
+
+
+

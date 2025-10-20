@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector> // Incluimos vector para usar std::vector
+#include <numeric> // Para std::accumulate
+#include <iomanip> // Para std::fixed y std::setprecision
+
+int main() {
+    // Declarar la matriz (se puede usar array o std::vector)
+    // Ejemplo con std::vector que permite mayor flexibilidad
+    std::vector<double> numeros = {8.5, 4.2, 6.1, 9.7, 5.5};
+
+    // Si usas un array estático:
+    // double numeros[] = {8.5, 4.2, 6.1, 9.7, 5.5};
+    // int tamano = sizeof(numeros) / sizeof(numeros[0]);
+
+    // 1. Calcular la suma de los elementos
+    double suma = 0.0;
+    // El bucle for-range es una forma moderna de iterar
+    for (double num : numeros) {
+        suma += num;
+    }
+
+    // Alternativa usando std::accumulate:
+    // double suma = std::accumulate(numeros.begin(), numeros.end(), 0.0);
+    // Esto también funciona para arrays estáticos:
+    // double suma = std::accumulate(std::begin(numeros), std::end(numeros), 0.0);
+
+    // Obtener el número total de elementos
+    int cantidad = numeros.size();
+    // Si usas un array estático, usarías 'tamano' en lugar de numeros.size()
+
+    // 2. Calcular el promedio
+    double promedio = 0.0;
+    if (cantidad > 0) { // Evitar división por cero si la matriz está vacía
+        promedio = suma / cantidad;
+    }
+
+    // 3. Mostrar el resultado
+    std::cout << "La suma de los elementos es: " << suma << std::endl;
+    std::cout << "El promedio de los elementos es: " << std::fixed << std::setprecision(2) << promedio << std::endl;
+
+    return 0;
+}
+

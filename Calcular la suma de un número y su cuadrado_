@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath> // Necesario para usar std::pow()
+
+int main() {
+    // Declara una variable para almacenar el número
+    int numero;
+
+    // Pide al usuario que ingrese un número
+    std::cout << "Ingresa un número: ";
+    std::cin >> numero;
+
+    // Calcula el cuadrado del número.
+    // Puedes usar multiplicacion: int cuadrado = numero * numero;
+    // O la funcion pow():
+    int cuadrado = std::pow(numero, 2);
+
+    // Calcula la suma del número y su cuadrado
+    int suma = numero + cuadrado;
+
+    // Muestra el resultado
+    std::cout << "La suma del número (" << numero << ") y su cuadrado (" << cuadrado << ") es: " << suma << std::endl;
+
+    return 0;
+}

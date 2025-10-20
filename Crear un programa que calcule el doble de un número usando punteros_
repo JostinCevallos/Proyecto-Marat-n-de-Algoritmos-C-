@@ -1,0 +1,51 @@
+#include <iostream>
+
+int main() {
+  int numero = 10; // Variable original
+  int *puntero = &numero; // Puntero que apunta a 'numero'
+  
+  // Se obtiene el doble del número a través del puntero
+  int doble = (*puntero) * 2; 
+
+  std::cout << "El número original es: " << numero << std::endl;
+  std::cout << "El doble del número es: " << doble << std::endl;
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

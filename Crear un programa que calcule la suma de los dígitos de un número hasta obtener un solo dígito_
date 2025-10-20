@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <iostream>
+
+int main() {
+    int numero;
+
+    std::cout << "Introduce un numero: ";
+    std::cin >> numero;
+
+    // Asegurarse de que el número es positivo
+    if (numero <= 0) {
+        std::cout << "Por favor, ingresa un numero positivo." << std::endl;
+        return 1;
+    }
+
+    // Bucle para sumar los dígitos hasta obtener un solo dígito
+    while (numero > 9) {
+        int suma_digitos = 0;
+        // Suma los dígitos del número actual
+        while (numero > 0) {
+            suma_digitos += numero % 10; // Obtiene el último dígito y lo suma
+            numero /= 10;               // Elimina el último dígito
+        }
+        numero = suma_digitos; // Actualiza el número con la nueva suma
+    }
+
+    std::cout << "La suma de los digitos es: " << numero << std::endl;
+
+    return 0;
+}
+
+
+

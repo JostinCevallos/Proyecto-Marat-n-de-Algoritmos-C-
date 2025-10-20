@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    int horas;
+    int minutos;
+    int minutos_totales;
+
+    // Solicitar al usuario que ingrese las horas
+    std::cout << "Introduce el número de horas: ";
+    std::cin >> horas;
+
+    // Solicitar al usuario que ingrese los minutos
+    std::cout << "Introduce el número de minutos: ";
+    std::cin >> minutos;
+
+    // Calcular los minutos totales
+    minutos_totales = (horas * 60) + minutos;
+
+    // Mostrar el resultado
+    std::cout << horas << " horas y " << minutos << " minutos son " << minutos_totales << " minutos totales." << std::endl;
+
+    return 0;
+}

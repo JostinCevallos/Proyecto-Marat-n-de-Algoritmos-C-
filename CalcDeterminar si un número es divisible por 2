@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main() {
+    int numero;
+
+    std::cout << "Ingrese un numero entero: ";
+    std::cin >> numero;
+
+    if (numero % 2 == 0 && numero % 3 == 0 && numero % 5 == 0) {
+        std::cout << "El numero " << numero << " es divisible por 2, 3 y 5 simultaneamente." << std::endl;
+    } else {
+        std::cout << "El numero " << numero << " NO es divisible por 2, 3 y 5 simultaneamente." << std::endl;
+    }
+
+    return 0;
+}

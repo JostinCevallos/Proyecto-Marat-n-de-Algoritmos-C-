@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    int segundosTotales;
+
+    std::cout << "Introduce el número total de segundos: ";
+    std::cin >> segundosTotales;
+
+    // Calcular horas
+    int horas = segundosTotales / 3600;
+
+    // Calcular el residuo de los segundos después de sacar las horas
+    int segundosRestantes = segundosTotales % 3600;
+
+    // Calcular minutos a partir del residuo
+    int minutos = segundosRestantes / 60;
+
+    // Calcular los segundos finales
+    int segundos = segundosRestantes % 60;
+
+    std::cout << segundosTotales << " segundos son: " << horas << " horas, "
+              << minutos << " minutos y " << segundos << " segundos." << std::endl;
+
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+
+// Función para calcular la suma de los dígitos
+int suma_dígitos(unsigned long n) {
+    int suma = 0;
+    while (n > 0) {
+        suma += n % 10; // Agrega el último dígito a la suma
+        n /= 10;       // Elimina el último dígito del número
+    }
+    return suma;
+}
+
+int main() {
+    unsigned long numero;
+
+    // Solicitar al usuario que ingrese un número
+    std::cout << "Ingresa un número entero: ";
+    std::cin >> numero;
+
+    // Calcular la suma de los dígitos usando la función
+    int resultado = suma_dígitos(numero);
+
+    // Mostrar el resultado
+    std::cout << "La suma de los dígitos es: " << resultado << std::endl;
+
+    return 0;
+}
+

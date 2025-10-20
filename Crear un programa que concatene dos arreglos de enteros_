@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <iterator>
+
+int main() {
+    // Arreglos de enteros iniciales
+    int arr1[] = {1, 2, 3};
+    int arr2[] = {4, 5, 6};
+
+    // Crear un vector a partir del primer arreglo
+    std::vector<int> vector_concatenado(std::begin(arr1), std::end(arr1));
+
+    // Insertar los elementos del segundo arreglo al final del vector
+    vector_concatenado.insert(vector_concatenado.end(), std::begin(arr2), std::end(arr2));
+
+    // Imprimir el resultado
+    std::cout << "El arreglo concatenado es: ";
+    for (int i : vector_concatenado) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

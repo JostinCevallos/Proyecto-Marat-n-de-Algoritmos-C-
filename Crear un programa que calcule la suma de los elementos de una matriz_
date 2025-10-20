@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+
+int main() {
+    // 1. Declarar e inicializar la matriz
+    std::vector<std::vector<int>> matriz = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    // 2. Declarar e inicializar la variable de suma
+    int suma = 0;
+
+    // 3. Recorrer la matriz usando bucles for anidados
+    for (int i = 0; i < matriz.size(); ++i) {
+        for (int j = 0; j < matriz[i].size(); ++j) {
+            // Sumar el elemento actual a la variable suma
+            suma += matriz[i][j];
+        }
+    }
+
+    // 4. Imprimir el resultado
+    std::cout << "La suma de los elementos de la matriz es: " << suma << std::endl;
+
+    return 0;
+}

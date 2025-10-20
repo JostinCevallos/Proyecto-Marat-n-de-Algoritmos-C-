@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string cadena1 = "Hola";
+    std::string cadena2 = "Hola";
+    std::string cadena3 = "Adiós";
+
+    if (cadena1 == cadena2) {
+        std::cout << "cadena1 y cadena2 son iguales." << std::endl;
+    } else {
+        std::cout << "cadena1 y cadena2 no son iguales." << std::endl;
+    }
+
+    if (cadena1 == cadena3) {
+        std::cout << "cadena1 y cadena3 son iguales." << std::endl;
+    } else {
+        std::cout << "cadena1 y cadena3 no son iguales." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

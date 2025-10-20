@@ -1,0 +1,50 @@
+#include <iostream>
+#include <cmath>
+
+// Función para verificar si un número es primo
+bool es_primo(int num) {
+    if (num <= 1) {
+        return false; // Los números menores o iguales a 1 no son primos
+    }
+    // 2 es el único número primo par
+    if (num == 2) {
+        return true;
+    }
+    // Los números pares (mayores que 2) no son primos
+    if (num % 2 == 0) {
+        return false;
+    }
+    // Solo necesitamos verificar divisores hasta la raíz cuadrada del número
+    // y solo con números impares, ya que los pares fueron descartados
+    for (int i = 3; i <= sqrt(num); i += 2) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int N;
+    std::cout << "Ingrese un número entero positivo (N): ";
+    std::cin >> N;
+
+    if (N < 2) {
+        std::cout << "No hay números primos hasta " << N << "." << std::endl;
+        return 0;
+    }
+
+    long long suma = 0; // Usamos long long para evitar desbordamiento si N es grande
+    
+    // Recorrer desde 2 hasta N
+    for (int i = 2; i <= N; ++i) {
+        if (es_primo(i)) {
+            suma += i;
+        }
+    }
+
+    std::cout << "La suma de los números primos hasta " << N << " es: " << suma << std::endl;
+
+    return 0;
+}
+

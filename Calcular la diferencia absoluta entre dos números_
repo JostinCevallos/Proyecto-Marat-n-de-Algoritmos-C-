@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath> // Para abs() y fabs()
+
+int main() {
+    // Ejemplo con enteros
+    int num1_int = 10;
+    int num2_int = -5;
+    int diff_int = std::abs(num1_int - num2_int);
+    std::cout << "La diferencia absoluta entre " << num1_int << " y " << num2_int << " es: " << diff_int << std::endl; // Salida: 15
+
+    // Ejemplo con números de punto flotante
+    double num1_double = 10.5;
+    double num2_double = 20.7;
+    double diff_double = std::fabs(num1_double - num2_double);
+    std::cout << "La diferencia absoluta entre " << num1_double << " y " << num2_double << " es: " << diff_double << std::endl; // Salida: 10.2
+
+    return 0;
+}

@@ -1,0 +1,58 @@
+#include <iostream>
+
+int main() {
+    int numero;
+    // Solicita al usuario que ingrese un número
+    std::cout << "Ingrese un número: ";
+    std::cin >> numero;
+
+    // Crea un puntero al número y almacena la dirección de memoria
+    int* punteroNumero = &numero;
+
+    // Calcula el triple usando el puntero
+    // El operador '*' se utiliza para desreferenciar el puntero y obtener el valor
+    int triple = (*punteroNumero) * 3;
+
+    // Imprime el resultado
+    std::cout << "El triple de " << numero << " es: " << triple << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+#include <iostream>
+
+int main() {
+    int N;
+    std::cout << "Ingresa un número N para generar la serie de Lucas hasta N: ";
+    std::cin >> N;
+
+    // Los primeros dos números de la serie de Lucas son 2 y 1
+    int a = 2;
+    int b = 1;
+
+    // Imprime el primer término si N es positivo
+    if (N >= 2) {
+        std::cout << a << " ";
+    }
+    // Imprime el segundo término si N es suficientemente grande
+    if (N >= 1) {
+        std::cout << b << " ";
+    }
+
+    // Calcula e imprime los términos restantes de la serie
+    while (true) {
+        int siguiente = a + b;
+        if (siguiente > N) {
+            break; // Detiene el bucle si el siguiente término excede N
+        }
+        std::cout << siguiente << " ";
+        a = b;
+        b = siguiente;
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+}
+
+

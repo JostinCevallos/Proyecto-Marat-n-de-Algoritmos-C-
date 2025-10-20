@@ -1,0 +1,76 @@
+#include <iostream>
+#include <limits>
+
+int main() {
+    float arreglo[] = {12.5, 3.14, -2.7, 5.0, 8.9};
+    int tamano = sizeof(arreglo) / sizeof(arreglo[0]);
+    
+    // Puntero al primer elemento del arreglo
+    float* puntero_minimo = &arreglo[0]; 
+    
+    // Puntero para recorrer el arreglo
+    float* puntero_actual = arreglo;
+    
+    // Recorrer el arreglo desde el primer elemento hasta el último
+    for (int i = 0; i < tamano; ++i) {
+        // Si el valor apuntado por el puntero actual es menor que el valor apuntado por puntero_minimo
+        if (*puntero_actual < *puntero_minimo) {
+            // Actualizar el puntero_minimo
+            puntero_minimo = puntero_actual;
+        }
+        // Mover el puntero al siguiente elemento
+        puntero_actual++;
+    }
+    
+    // Imprimir el menor elemento encontrado
+    std::cout << "El menor elemento del arreglo es: " << *puntero_minimo << std::endl;
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

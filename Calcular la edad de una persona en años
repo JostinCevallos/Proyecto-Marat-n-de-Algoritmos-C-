@@ -1,0 +1,51 @@
+#include <iostream>
+#include <ctime>
+
+// Estructura para representar una fecha
+struct Fecha {
+    int dia;
+    int mes;
+    int anio;
+};
+
+int main() {
+    // Declaración de variables
+    Fecha fechaActual;
+    Fecha fechaNacimiento;
+
+    // Obtener la fecha actual del sistema
+    time_t t = time(0);
+    tm* now = localtime(&t);
+    fechaActual.dia = now->tm_mday;
+    fechaActual.mes = now->tm_mon + 1;
+    fechaActual.anio = now->tm_year + 1900;
+
+    // Solicitar la fecha de nacimiento al usuario
+    std::cout << "Ingresa tu fecha de nacimiento (DD MM AAAA): ";
+    std::cin >> fechaNacimiento.dia >> fechaNacimiento.mes >> fechaNacimiento.anio;
+
+    // Cálculo de la edad en años, meses y días
+    int anios = fechaActual.anio - fechaNacimiento.anio;
+    int meses = fechaActual.mes - fechaNacimiento.mes;
+    int dias = fechaActual.dia - fechaNacimiento.dia;
+
+    // Ajustar meses y días si es necesario
+    if (dias < 0) {
+        // Préstamo de un mes de los meses
+        meses--;
+        // Suma de los días del mes anterior (considerando meses de 31 días)
+        dias += 30; // Aproximación, para mayor exactitud se necesitaría saber el mes
+    }
+
+    if (meses < 0) {
+        // Préstamo de un año de los años
+        anios--;
+        // Suma de 12 meses
+        meses += 12;
+    }
+
+    // Imprimir la edad calculada
+    std::cout << "Tu edad es: " << anios << " años, " << meses << " meses y " << dias << " dias." << std::endl;
+
+    return 0;
+}

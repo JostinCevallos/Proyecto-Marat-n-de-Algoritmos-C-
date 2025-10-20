@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+int main() {
+    // 1. Declara un arreglo (vector) de cadenas
+    std::vector<std::string> cadenas = {"hola", "mundo", "programacion", "c++"};
+
+    // 2. Inicializa variables para la suma de longitudes y el contador
+    int suma_longitudes = 0;
+
+    // 3. Itera sobre el arreglo y suma las longitudes
+    for (const std::string& cadena : cadenas) {
+        suma_longitudes += cadena.length(); // o cadena.size()
+    }
+
+    // 4. Calcula el promedio
+    // Asegúrate de que el número de cadenas no sea cero para evitar la división por cero
+    if (!cadenas.empty()) {
+        double promedio = static_cast<double>(suma_longitudes) / cadenas.size();
+
+        // 5. Muestra el resultado
+        std::cout << "La longitud promedio de las cadenas es: " << promedio << std::endl;
+    } else {
+        std::cout << "El arreglo de cadenas está vacío." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

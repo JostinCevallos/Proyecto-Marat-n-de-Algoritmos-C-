@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <numeric> // Incluir para std::accumulate
+
+int main() {
+    // Definir el arreglo y su tamaño
+    std::vector<double> numeros = {10.5, 20.2, 15.8, 22.1, 18.4};
+    
+    // Sumar todos los elementos del arreglo
+    // std::accumulate suma todos los elementos, comenzando desde 0.0
+    // std::begin(numeros) es un iterador al principio del vector
+    // std::end(numeros) es un iterador al final del vector
+    double suma = std::accumulate(std::begin(numeros), std::end(numeros), 0.0);
+
+    // Calcular el promedio dividiendo la suma entre la cantidad de elementos
+    double promedio = suma / numeros.size();
+
+    // Mostrar el resultado
+    std::cout << "El arreglo es: ";
+    for (double num : numeros) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+    std::cout << "La suma de los elementos es: " << suma << std::endl;
+    std::cout << "El promedio es: " << promedio << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+

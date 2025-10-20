@@ -1,0 +1,32 @@
+#include <iostream>
+
+int main() {
+    // 1. Declarar e inicializar el arreglo de enteros
+    int arreglo[] = {10, 20, 30, 40, 50};
+    
+    // 2. Inicializar la variable para almacenar la suma
+    int suma = 0;
+
+    // 3. Calcular el tamaño del arreglo. Esto es importante para el bucle.
+    //    La forma más común es usar `sizeof(arreglo) / sizeof(arreglo[0])`.
+    //    Si usas un `std::vector`, puedes usar `.size()`.
+    int tamano = sizeof(arreglo) / sizeof(arreglo[0]);
+
+    // 4. Recorrer el arreglo con un bucle for
+    for (int i = 0; i < tamano; ++i) {
+        // 5. Sumar cada elemento a la variable suma
+        suma += arreglo[i];
+    }
+
+    // 6. Mostrar el resultado
+    std::cout << "La suma de los elementos del arreglo es: " << suma << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+

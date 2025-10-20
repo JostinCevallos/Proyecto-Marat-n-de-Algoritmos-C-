@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+
+int main() {
+    // Declaración del vector para almacenar los números
+    std::vector<int> numeros;
+    int cantidad, numeroReferencia;
+    int contador = 0;
+
+    // Solicitar al usuario la cantidad de números
+    std::cout << "Ingrese la cantidad de numeros que desea ingresar: ";
+    std::cin >> cantidad;
+
+    // Solicitar los números al usuario y almacenarlos en el vector
+    std::cout << "Ingrese los numeros uno por uno:" << std::endl;
+    for (int i = 0; i < cantidad; ++i) {
+        int temp;
+        std::cout << "Numero " << i + 1 << ": ";
+        std::cin >> temp;
+        numeros.push_back(temp); // Agrega el número al final del vector
+    }
+
+    // Solicitar el número de referencia al usuario
+    std::cout << "Ingrese el numero de referencia: ";
+    std::cin >> numeroReferencia;
+
+    // Recorrer el vector para contar los elementos mayores que el número de referencia
+    for (int numero : numeros) { // Este es un bucle for-each
+        if (numero > numeroReferencia) {
+            contador++;
+        }
+    }
+
+    // Mostrar el resultado
+    std::cout << "Hay " << contador << " elementos mayores que " << numeroReferencia << std::endl;
+
+    return 0;
+}
+

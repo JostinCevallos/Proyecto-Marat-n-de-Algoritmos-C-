@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+int main() {
+    std::vector<std::string> cadenas = {"manzana", "banana", "manga", "mandarina", "uva"};
+    char letra_buscada = 'm';
+    int contador = 0;
+
+    for (const std::string& cadena : cadenas) {
+        if (!cadena.empty() && cadena[0] == letra_buscada) {
+            contador++;
+        }
+    }
+
+    std::cout << "Hay " << contador << " cadenas que comienzan con la letra '" << letra_buscada << "'." << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

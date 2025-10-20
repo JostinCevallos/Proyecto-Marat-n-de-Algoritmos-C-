@@ -1,0 +1,15 @@
+#include <iostream> // Se incluye la librería iostream para operaciones de entrada/salida.
+
+int main() { // Se define la función principal del programa.
+    int sumaPares = 0; // Se inicializa la variable para almacenar la suma de los números pares.
+
+    // Se itera desde 2 hasta 50, incrementando de 2 en 2 para sumar solo los números pares.
+    for (int i = 2; i <= 50; i += 2) { 
+        sumaPares += i; // Se añade el número par actual a la suma.
+    }
+
+    // Se imprime el resultado en la consola.
+    std::cout << "La suma de los números pares entre 1 y 50 es: " << sumaPares << std::endl;
+
+    return 0; // Se indica que el programa finalizó correctamente.
+}

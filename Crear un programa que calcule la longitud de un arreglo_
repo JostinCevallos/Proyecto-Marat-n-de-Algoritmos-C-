@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    int miArreglo[] = {10, 20, 30, 40, 50};
+    // Calcula el tamaño total del arreglo en bytes
+    size_t tamanoTotal = sizeof(miArreglo);
+    // Calcula el tamaño de un elemento en bytes
+    size_t tamanoElemento = sizeof(miArreglo[0]);
+    // La longitud es el resultado de la división
+    size_t longitud = tamanoTotal / tamanoElemento;
+
+    std::cout << "La longitud del arreglo es: " << longitud << std::endl; // Salida: 5
+    return 0;
+}
+

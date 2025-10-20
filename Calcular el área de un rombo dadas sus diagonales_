@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+    float diagonalMayor, diagonalMenor, area;
+
+    // Solicitar la longitud de la diagonal mayor
+    std::cout << "Ingrese la longitud de la diagonal mayor del rombo: ";
+    std::cin >> diagonalMayor;
+
+    // Solicitar la longitud de la diagonal menor
+    std::cout << "Ingrese la longitud de la diagonal menor del rombo: ";
+    std::cin >> diagonalMenor;
+
+    // Calcular el área
+    area = (diagonalMayor * diagonalMenor) / 2.0; // Usar 2.0 para asegurar división flotante
+
+    // Mostrar el resultado
+    std::cout << "El area del rombo es: " << area << std::endl;
+
+    return 0;
+}

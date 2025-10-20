@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+#include <algorithm>
+
+int main() {
+    std::string cadena = "Hola MUNDO 123";
+
+    // Método 1: Usando un bucle y tolower()
+    std::string cadenaMinusculas1 = cadena; // Copia de la cadena original
+    for (char &c : cadenaMinusculas1) {
+        c = std::tolower(static_cast<unsigned char>(c));
+    }
+    std::cout << "Método 1: " << cadenaMinusculas1 << std::endl;
+
+    // Método 2: Usando std::transform
+    std::string cadenaMinusculas2 = cadena; // Copia de la cadena original
+    std::transform(cadenaMinusculas2.begin(), cadenaMinusculas2.end(), cadenaMinusculas2.begin(),
+                   [](unsigned char c){ return std::tolower(c); });
+    std::cout << "Método 2: " << cadenaMinusculas2 << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

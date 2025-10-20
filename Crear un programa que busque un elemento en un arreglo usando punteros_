@@ -1,0 +1,67 @@
+#include <iostream>
+
+int main() {
+    int arreglo[] = {10, 25, 5, 15, 30};
+    int elemento_a_buscar = 15;
+    int tamano = sizeof(arreglo) / sizeof(arreglo[0]);
+
+    // Puntero que apunta al inicio del arreglo
+    int *p = arreglo;
+    // Puntero que apunte al final del arreglo
+    int *fin = arreglo + tamano;
+
+    bool encontrado = false;
+    // Bucle para buscar el elemento
+    while (p < fin) {
+        // Si el elemento se encuentra
+        if (*p == elemento_a_buscar) {
+            // Calcula el índice del elemento
+            int indice = p - arreglo;
+            std::cout << "Elemento encontrado en la posicion: " << indice << std::endl;
+            encontrado = true;
+            break;
+        }
+        // Avanza el puntero a la siguiente posición del arreglo
+        p++;
+    }
+
+    // Si el elemento no se encuentra en el arreglo
+    if (!encontrado) {
+        std::cout << "Elemento no encontrado." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

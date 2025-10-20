@@ -1,0 +1,31 @@
+#include <iostream>
+
+int main() {
+    double nota1, nota2, nota3;
+    double peso1, peso2, peso3;
+    double promedio_ponderado;
+
+    // Solicitar las notas al usuario
+    std::cout << "Ingrese la primera nota: ";
+    std::cin >> nota1;
+    std::cout << "Ingrese el peso de la primera nota: ";
+    std::cin >> peso1;
+
+    std::cout << "Ingrese la segunda nota: ";
+    std::cin >> nota2;
+    std::cout << "Ingrese el peso de la segunda nota: ";
+    std::cin >> peso2;
+
+    std::cout << "Ingrese la tercera nota: ";
+    std::cin >> nota3;
+    std::cout << "Ingrese el peso de la tercera nota: ";
+    std::cin >> peso3;
+
+    // Calcular el promedio ponderado
+    promedio_ponderado = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+
+    // Mostrar el resultado
+    std::cout << "El promedio ponderado es: " << promedio_ponderado << std::endl;
+
+    return 0;
+}

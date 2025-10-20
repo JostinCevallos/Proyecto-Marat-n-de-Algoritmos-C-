@@ -1,0 +1,76 @@
+#include <iostream>
+
+int main() {
+    // Arreglo original de floats
+    float arreglo_original[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+    int tamano = sizeof(arreglo_original) / sizeof(arreglo_original[0]);
+
+    // Se declara el nuevo arreglo con el mismo tamaño
+    float arreglo_copiado[tamano];
+
+    // Se crea un puntero al primer elemento del arreglo original
+    float *puntero_original = arreglo_original;
+
+    // Se copia el arreglo elemento por elemento usando punteros
+    for (int i = 0; i < tamano; ++i) {
+        // Se desreferencia el puntero para obtener el valor y se asigna al nuevo arreglo
+        arreglo_copiado[i] = *puntero_original;
+        // Se avanza el puntero al siguiente elemento
+        puntero_original++;
+    }
+
+    // Se imprime el arreglo copiado para verificar
+    std::cout << "Arreglo copiado:" << std::endl;
+    for (int i = 0; i < tamano; ++i) {
+        std::cout << arreglo_copiado[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

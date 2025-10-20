@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+    // 1. Declarar las variables para los tres números
+    double num1, num2, num3;
+
+    // 2. Pedir al usuario que ingrese los números
+    std::cout << "Introduce el primer número: ";
+    std::cin >> num1;
+    std::cout << "Introduce el segundo número: ";
+    std::cin >> num2;
+    std::cout << "Introduce el tercer número: ";
+    std::cin >> num3;
+
+    // 3. Calcular el producto
+    double producto = num1 * num2 * num3;
+
+    // 4. Mostrar el resultado
+    std::cout << "El producto de " << num1 << ", " << num2 << " y " << num3 << " es: " << producto << std::endl;
+
+    return 0;
+}

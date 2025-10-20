@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string> // Aunque se usa para std::string, este ejemplo usa char*
+#include <cstring> // Necesario para la función de ejemplo strcmp si no se usa una implementación manual
+
+// Función para comparar dos cadenas usando punteros
+int compararCadenas(const char* str1, const char* str2) {
+    while (*str1 && (*str1 == *str2)) {
+        str1++;
+        str2++;
+    }
+    return (*str1 - *str2);
+}
+
+int main() {
+    // Declarar las cadenas usando arrays de caracteres y punteros
+    const char* cadena1 = "Hola";
+    const char* cadena2 = "Hola";
+    const char* cadena3 = "Adiós";
+
+    // Comparar las cadenas
+    int resultado1 = compararCadenas(cadena1, cadena2);
+    int resultado2 = compararCadenas(cadena1, cadena3);
+
+    // Mostrar los resultados
+    if (resultado1 == 0) {
+        std::cout << "\"" << cadena1 << "\" y \"" << cadena2 << "\" son iguales." << std::endl;
+    } else {
+        std::cout << "\"" << cadena1 << "\" y \"" << cadena2 << "\" son diferentes." << std::endl;
+    }
+
+    if (resultado2 == 0) {
+        std::cout << "\"" << cadena1 << "\" y \"" << cadena3 << "\" son iguales." << std::endl;
+    } else {
+        std::cout << "\"" << cadena1 << "\" y \"" << cadena3 << "\" son diferentes." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    int suma = 0; // Se inicializa la suma en 0
+
+    // Se itera desde 1 hasta 100
+    for (int i = 1; i <= 100; ++i) {
+        // Se comprueba si el número es impar
+        if (i % 2 != 0) {
+            suma += i; // Se suma el número impar
+        }
+    }
+
+    // Se imprime el resultado
+    std::cout << "La suma de los números impares entre 1 y 100 es: " << suma << std::endl;
+
+    return 0; // Se indica que el programa finalizó correctamente
+}

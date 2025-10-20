@@ -1,0 +1,35 @@
+#include <iostream>
+
+// Función recursiva para calcular la potencia de un número
+double potencia(double base, int exponente) {
+    // Caso base: cualquier número elevado a la potencia 0 es 1
+    if (exponente == 0) {
+        return 1;
+    }
+    // Manejo de exponentes negativos
+    else if (exponente < 0) {
+        // Para exponentes negativos, calculamos la potencia del inverso del número con el exponente positivo
+        return 1.0 / potencia(base, -exponente);
+    }
+    // Caso recursivo: multiplicamos la base por el resultado de la llamada recursiva
+    else {
+        return base * potencia(base, exponente - 1);
+    }
+}
+
+int main() {
+    double base;
+    int exponente;
+
+    // Solicitar al usuario la base y el exponente
+    std::cout << "Introduce la base: ";
+    std::cin >> base;
+    std::cout << "Introduce el exponente: ";
+    std::cin >> exponente;
+
+    // Calcular y mostrar el resultado
+    double resultado = potencia(base, exponente);
+    std::cout << base << " elevado a la " << exponente << " es: " << resultado << std::endl;
+
+    return 0;
+}

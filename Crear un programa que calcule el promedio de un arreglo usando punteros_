@@ -1,0 +1,79 @@
+#include <iostream>
+#include <vector> // Incluir para usar std::vector, una alternativa más moderna a arreglos
+
+// Función para calcular el promedio usando punteros
+double calcularPromedio(int* arr, int tamano) {
+    // Si el tamaño es 0, no se puede calcular el promedio
+    if (tamano == 0) {
+        return 0.0;
+    }
+
+    // Variable para almacenar la suma
+    double suma = 0.0;
+    // Puntero para recorrer el arreglo
+    int* puntero_actual = arr;
+
+    // Bucle for para recorrer el arreglo usando el puntero
+    for (int i = 0; i < tamano; ++i) {
+        // Sumar el valor al que apunta el puntero
+        suma += *puntero_actual;
+        // Mover el puntero al siguiente elemento del arreglo
+        puntero_actual++;
+    }
+
+    // Calcular y devolver el promedio
+    return suma / tamano;
+}
+
+int main() {
+    // Declarar un arreglo de enteros y inicializarlo
+    int miArreglo[] = {10, 20, 30, 40, 50};
+    // Calcular el tamaño del arreglo
+    int tamano = sizeof(miArreglo) / sizeof(miArreglo[0]);
+
+    // Llamar a la función para obtener el promedio
+    double promedio = calcularPromedio(miArreglo, tamano);
+
+    // Imprimir el resultado
+    std::cout << "El arreglo es: ";
+    for (int i = 0; i < tamano; ++i) {
+        std::cout << miArreglo[i] << (i == tamano - 1 ? "" : ", ");
+    }
+    std::cout << std::endl;
+
+    std::cout << "El promedio del arreglo es: " << promedio << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

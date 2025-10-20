@@ -1,0 +1,24 @@
+#include <iostream> // Para entrada y salida estándar (cout, cin)
+#include <cmath>    // Para la función pow()
+
+int main() {
+    int n;
+
+    // Pedir al usuario que ingrese el valor de N
+    std::cout << "Ingrese un numero N para calcular la serie de cubos: ";
+    std::cin >> n;
+
+    std::cout << "La serie de cubos hasta " << n << " es:" << std::endl;
+
+    // Iterar desde 1 hasta N
+    for (int i = 1; i <= n; ++i) {
+        // Calcular el cubo del número actual
+        // También se puede calcular como i * i * i
+        double cubo = std::pow(i, 3); 
+        
+        // Mostrar el cubo del número
+        std::cout << i << "^3 = " << cubo << std::endl;
+    }
+
+    return 0;
+}

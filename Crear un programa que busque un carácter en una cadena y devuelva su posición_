@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string cadena = "Hola mundo";
+    char caracter_a_buscar = 'o';
+    
+    // Usar string::find para buscar el carácter
+    size_t posicion = cadena.find(caracter_a_buscar);
+    
+    // Verificar si se encontró el carácter
+    if (posicion != std::string::npos) {
+        std::cout << "El carácter '" << caracter_a_buscar << "' se encontró en la posición: " << posicion << std::endl;
+    } else {
+        std::cout << "El carácter '" << caracter_a_buscar << "' no se encontró en la cadena." << std::endl;
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

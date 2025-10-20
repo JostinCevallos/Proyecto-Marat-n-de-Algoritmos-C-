@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main() {
+    int numero, i;
+    long long factorial = 1; // Usa long long para evitar desbordamiento con números grandes
+
+    std::cout << "Introduce un número entero positivo: ";
+    std::cin >> numero;
+
+    // Manejar el caso de números negativos o cero
+    if (numero < 0) {
+        std::cout << "No se puede calcular el factorial de un número negativo." << std::endl;
+    } else {
+        i = numero;
+        while (i > 0) {
+            factorial *= i; // Multiplica el factorial por el número actual
+            i--;            // Decrementa el número
+        }
+        std::cout << "El factorial de " << numero << " es: " << factorial << std::endl;
+    }
+
+    return 0;
+}
+

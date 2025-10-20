@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+  double a, b, c;
+  double promedio;
+
+  // Solicitar al usuario que ingrese los tres números
+  std::cout << "Introduce el primer numero: ";
+  std::cin >> a;
+  std::cout << "Introduce el segundo numero: ";
+  std::cin >> b;
+  std::cout << "Introduce el tercer numero: ";
+  std::cin >> c;
+
+  // Calcular el promedio
+  promedio = (a + b + c) / 3.0;
+
+  // Mostrar el resultado
+  std::cout << "El promedio de los tres numeros es: " << promedio << std::endl;
+
+  return 0;
+}

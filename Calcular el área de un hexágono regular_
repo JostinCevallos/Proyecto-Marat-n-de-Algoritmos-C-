@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double lado;
+
+    std::cout << "Ingrese la longitud del lado del hexágono: ";
+    std::cin >> lado;
+
+    // Fórmula del área de un hexágono regular: A = (3 * sqrt(3) / 2) * lado^2
+    double area = (3 * std::sqrt(3) / 2) * std::pow(lado, 2);
+
+    std::cout << "El área del hexágono regular es: " << area << std::endl;
+
+    return 0;
+}

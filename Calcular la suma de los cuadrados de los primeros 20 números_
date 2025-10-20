@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    int suma_cuadrados = 0;
+    for (int i = 1; i <= 20; ++i) {
+        suma_cuadrados += i * i;
+    }
+    std::cout << "La suma de los cuadrados de los primeros 20 números es: " << suma_cuadrados << std::endl;
+    return 0;
+}

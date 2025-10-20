@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+int main() {
+    std::vector<std::string> cadenas = {"hola mundo", "programacion c++", "ejemplo de busqueda", "cadena sin la letra"};
+    char letra_a_buscar;
+
+    std::cout << "Introduce la letra que deseas buscar: ";
+    std::cin >> letra_a_buscar;
+
+    // Iterar sobre cada cadena en el vector
+    for (const std::string& cadena : cadenas) {
+        // Buscar la primera ocurrencia de la letra
+        size_t pos = cadena.find(letra_a_buscar);
+
+        // Si la letra se encontró (la posición no es string::npos)
+        if (pos != std::string::npos) {
+            std::cout << "La primera cadena que contiene '" << letra_a_buscar << "' es: " << cadena << std::endl;
+            // Salir del bucle una vez que se encuentre la primera coincidencia
+            break; 
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

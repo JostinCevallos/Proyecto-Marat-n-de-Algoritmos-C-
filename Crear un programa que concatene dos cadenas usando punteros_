@@ -1,0 +1,56 @@
+#include <iostream>
+
+int main() {
+    char cadena1[50] = "Hola";
+    char cadena2[] = " Mundo";
+    char *ptr1 = cadena1; // Puntero a la primera cadena
+    char *ptr2 = cadena2; // Puntero a la segunda cadena
+
+    // 1. Mover el puntero a la posición del carácter nulo de la primera cadena
+    while (*ptr1 != '\0') {
+        ptr1++;
+    }
+
+    // 2. Copiar los caracteres de la segunda cadena en la primera
+    while (*ptr2 != '\0') {
+        *ptr1 = *ptr2;
+        ptr1++;
+        ptr2++;
+    }
+
+    // 3. Añadir el carácter nulo al final de la cadena concatenada
+    *ptr1 = '\0';
+
+    // 4. Mostrar el resultado
+    std::cout << "La cadena concatenada es: " << cadena1 << std::endl; // Salida: Hola Mundo
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

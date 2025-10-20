@@ -1,0 +1,19 @@
+#include <iostream>
+
+// Función que calcula el cubo multiplicando el número tres veces
+int calcularCubo(int num) {
+    return num * num * num;
+}
+
+int main() {
+    int numero = 5;
+    int cubo = calcularCubo(numero);
+    std::cout << "El cubo de " << numero << " es: " << cubo << std::endl; // Salida: El cubo de 5 es: 125
+    return 0;
+}
+
+
+
+
+
+

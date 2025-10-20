@@ -1,0 +1,28 @@
+#include <iostream> // Necesario para la entrada y salida de datos (cout y cin)
+
+int main() {
+    int n;
+    int suma = 0;
+
+    // 1. Solicitar al usuario que ingrese el número de términos (N)
+    std::cout << "Ingrese la cantidad de números que desea sumar (N): ";
+    std::cin >> n;
+
+    // 2. Validar que N sea un número positivo
+    if (n <= 0) {
+        std::cout << "Por favor, ingrese un número entero positivo." << std::endl;
+        return 1; // Salir del programa con un código de error
+    }
+
+    // 3. Usar un bucle for para iterar desde 1 hasta N
+    for (int i = 1; i <= n; ++i) {
+        // 4. Sumar cada número a la variable 'suma'
+        suma += i;
+    }
+
+    // 5. Mostrar el resultado
+    std::cout << "La suma de los primeros " << n << " números es: " << suma << std::endl;
+
+    return 0; // Indicar que el programa terminó correctamente
+}
+

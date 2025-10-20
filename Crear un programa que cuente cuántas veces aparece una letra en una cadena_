@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string cadena;
+    char letra;
+    int contador = 0;
+
+    // 1. Pedir al usuario la cadena de texto
+    std::cout << "Introduce una cadena de texto: ";
+    std::getline(std::cin, cadena);
+
+    // 2. Pedir al usuario la letra a buscar
+    std::cout << "Introduce la letra que quieres contar: ";
+    std::cin >> letra;
+
+    // 3. Recorrer la cadena y contar las ocurrencias
+    for (int i = 0; i < cadena.length(); ++i) {
+        if (cadena[i] == letra) {
+            contador++;
+        }
+    }
+
+    // 4. Mostrar el resultado
+    std::cout << "La letra '" << letra << "' aparece " << contador << " veces." << std::endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

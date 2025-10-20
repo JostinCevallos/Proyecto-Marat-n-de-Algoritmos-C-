@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main() {
+    int suma = 0;
+    for (int i = 1; i <= 50; ++i) {
+        if (i % 4 == 0) {
+            suma += i;
+        }
+    }
+    std::cout << "La suma de los múltiplos de 4 entre 1 y 50 es: " << suma << std::endl;
+    return 0;
+}

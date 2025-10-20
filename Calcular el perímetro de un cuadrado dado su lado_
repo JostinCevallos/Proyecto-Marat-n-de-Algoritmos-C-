@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    // Declarar la variable para el lado y el perímetro
+    double lado, perimetro;
+
+    // Solicitar al usuario que ingrese el valor del lado
+    std::cout << "Introduce la longitud del lado del cuadrado: ";
+    std::cin >> lado;
+
+    // Calcular el perímetro usando la fórmula: perimetro = 4 * lado
+    perimetro = 4 * lado;
+
+    // Mostrar el resultado
+    std::cout << "El perimetro del cuadrado es: " << perimetro << std::endl;
+
+    return 0;
+}

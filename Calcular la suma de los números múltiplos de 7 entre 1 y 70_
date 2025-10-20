@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main() {
+    int suma = 0; // Se inicializa la variable suma en 0
+    for (int i = 1; i <= 70; ++i) { // Se itera desde 1 hasta 70
+        if (i % 7 == 0) { // Se verifica si el número es múltiplo de 7
+            suma += i; // Se añade el múltiplo a la suma
+        }
+    }
+    std::cout << "La suma de los múltiplos de 7 entre 1 y 70 es: " << suma << std::endl;
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+  // Declarar las variables para los cuatro números
+  double num1, num2, num3, num4;
+
+  // Solicitar al usuario que introduzca los números
+  std::cout << "Introduce el primer número: ";
+  std::cin >> num1;
+  std::cout << "Introduce el segundo número: ";
+  std::cin >> num2;
+  std::cout << "Introduce el tercer número: ";
+  std::cin >> num3;
+  std::cout << "Introduce el cuarto número: ";
+  std::cin >> num4;
+
+  // Calcular la suma
+  double suma = num1 + num2 + num3 + num4;
+
+  // Calcular la media aritmética
+  double media = suma / 4.0;
+
+  // Mostrar el resultado
+  std::cout << "La media aritmética es: " << media << std::endl;
+
+  return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream> // Se incluye la librería iostream para entrada/salida.
+
+int main() { // Función principal del programa.
+    double apotema; // Se declara una variable de tipo double para el apotema.
+    double perimetro; // Se declara una variable de tipo double para el perímetro.
+    double area; // Se declara una variable de tipo double para el área.
+
+    std::cout << "Ingrese el valor del apotema del pentágono: "; // Se solicita el apotema.
+    std::cin >> apotema; // Se lee el valor del apotema.
+
+    std::cout << "Ingrese el valor del perímetro del pentágono: "; // Se solicita el perímetro.
+    std::cin >> perimetro; // Se lee el valor del perímetro.
+
+    area = (perimetro * apotema) / 2.0; // Se calcula el área usando la fórmula.
+
+    std::cout << "El área del pentágono regular es: " << area << std::endl; // Se muestra el área.
+
+    return 0; // Se indica que el programa finalizó correctamente.
+}

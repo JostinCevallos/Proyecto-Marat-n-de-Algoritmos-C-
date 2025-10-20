@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string s1 = "Hola ";
+    std::string s2 = "Mundo";
+    std::string resultado = s1 + s2; // Se concatenan s1 y s2
+    
+    std::cout << resultado << std::endl; // Salida: Hola Mundo
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

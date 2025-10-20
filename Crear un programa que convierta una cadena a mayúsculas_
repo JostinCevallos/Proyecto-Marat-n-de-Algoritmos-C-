@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <cctype> // Para std::toupper
+
+int main() {
+    std::string entrada;
+    std::cout << "Ingrese una cadena: ";
+    std::cin >> entrada; // Lee la cadena del usuario
+
+    // Itera sobre cada carácter de la cadena
+    for (char &c : entrada) {
+        // Convierte el carácter a mayúsculas usando std::toupper
+        c = std::toupper(static_cast<unsigned char>(c));
+    }
+
+    std::cout << "Cadena en mayúsculas: " << entrada << std::endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+#include <iostream>
+
+int main() {
+    int n;
+    double suma = 0.0;
+    double numero;
+
+    // 1. Preguntar al usuario cuántos números ingresará
+    std::cout << "Ingrese la cantidad de numeros (N): ";
+    std::cin >> n;
+
+    // Validar que N sea mayor que 0
+    if (n <= 0) {
+        std::cout << "La cantidad de numeros debe ser mayor a cero." << std::endl;
+        return 1; // Salir con código de error
+    }
+
+    // 2. Leer los N números y calcular la suma
+    std::cout << "Ingrese los " << n << " numeros:" << std::endl;
+    for (int i = 0; i < n; ++i) {
+        std::cout << "Numero " << i + 1 << ": ";
+        std::cin >> numero;
+        suma += numero;
+    }
+
+    // 3. Calcular el promedio
+    double promedio = suma / n;
+
+    // 4. Mostrar el resultado
+    std::cout << "El promedio de los " << n << " numeros es: " << promedio << std::endl;
+
+    return 0;
+}
+
+
+

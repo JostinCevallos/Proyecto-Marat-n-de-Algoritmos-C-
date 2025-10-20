@@ -1,0 +1,56 @@
+#include <iostream>
+
+int main() {
+  // Arreglo original
+  int arreglo_original[] = {1, 2, 3, 4, 5};
+  int tamano = sizeof(arreglo_original) / sizeof(arreglo_original[0]);
+
+  // Declarar el nuevo arreglo (debe tener el mismo tamaño)
+  int arreglo_copia[tamano];
+
+  // Crear un puntero al primer elemento del arreglo original
+  int* puntero_original = arreglo_original;
+
+  // Usar un bucle para copiar los elementos uno por uno
+  for (int i = 0; i < tamano; i++) {
+    // Copiar el valor apuntado por el puntero al nuevo arreglo
+    arreglo_copia[i] = *puntero_original;
+    // Mover el puntero al siguiente elemento
+    puntero_original++;
+  }
+
+  // Imprimir el arreglo copiado para verificar
+  std::cout << "Arreglo copiado: ";
+  for (int i = 0; i < tamano; i++) {
+    std::cout << arreglo_copia[i] << " ";
+  }
+  std::cout << std::endl;
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

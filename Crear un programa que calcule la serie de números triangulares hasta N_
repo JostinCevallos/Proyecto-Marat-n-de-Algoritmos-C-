@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+    int n;
+    std::cout << "Ingrese el valor de N: ";
+    std::cin >> n;
+
+    int triangular = 1; // El primer número triangular
+    int i = 1;
+
+    std::cout << "La serie de números triangulares hasta " << n << " es:" << std::endl;
+    while (triangular <= n) {
+        std::cout << triangular << " ";
+        i++;
+        triangular += i; // Calcula el siguiente número triangular
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
